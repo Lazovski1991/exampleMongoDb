@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th>id</th>
+        <th>name</th>
+    </tr>
+
+    <tr th:each="users:${users}">
+        <td th:utext="${users.getId()}">id</td>
+        <td th:utext="*{users.name}">name</td>
+    </tr>
+
+</table>
+
+
+<!--<form th:method="POST" th:action="@{/people}" th:object="${person}">
+    <label for="name"> Enter name</label>
+    <input type="text" th:field="*{name}" id="name"/>
+    <br/>
+    <input type="submit" value="Create!"/>
+</form>-->
+</body>
+</html>
